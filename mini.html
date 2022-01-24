@@ -15,7 +15,12 @@
         <div class="col-sm-12">
         <nav class="navbar navbar-expand-sm navbar-light bg-light">
           <div class="container">
-              <a class="navbar-brand navbar-brand-centered"><h2>Fashion Store</h2></a>
+              <a class="navbar-brand navbar-brand-centered"><h2 id="demo" onclick="myFunction()">Fashion Store</h2></a>
+              <script>
+                  function myFunction(){
+                      document.getElementById("demo").innerHTML = "Store Fashion"
+                  }
+              </script>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-3 mb-lg-0">
                   <li class="nav-item">
@@ -451,7 +456,7 @@
             <div class="container">    
             <div class="col-md-3"></div>
             <h2 class="text-white">Feedback Form</h2>
-            <form>
+            <form>  
                 <div class="row">
                 <div class="col-xl-4 mb-5">
                   <label for="exampleInputFullName" class="form-label text-white">Email</label>
@@ -461,7 +466,7 @@
                 <div class="col col-xl-4"> 
                 <div class="mb-lg-4">
                   <label for="exampleInputEmail" class="form-label text-white">Full Name</label>
-                  <input type="email" class="form-control" id="exampleInputEmail">
+                  <input type="email" name= "fname" class="form-control" id="exampleInputEmail">
                 </div>
                 </div>  
             <div class="col-xl-6 mb-3">
@@ -469,8 +474,12 @@
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
               </div>
                 <div class="mb-1">
-                    <button type="submit" class="btn btn-info">Submit</button>
-                </div>
+                    <button id="btn" type="submit" class="btn btn-info" href='#'>Submit</button>
+                  <script>
+                    document.getElementById("btn").onclick = () => {
+                        alert("Successful Submission")
+                    }
+                  </script>
             </div>
         
          </form>    
